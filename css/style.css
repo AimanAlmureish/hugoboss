@@ -44,6 +44,13 @@ main::before {
     height: 100vh;
 }
 
+.innerShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .showCase img:nth-child(1) {
     transform: scale(2.7) rotate(90deg);
     position: relative;
@@ -85,7 +92,7 @@ main::before {
     align-self: flex-start;
     position: absolute;
     top: 1em;
-    padding: 0em 3em;
+    padding: 2em 3em;
     animation: logo 2s 9s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -101,6 +108,7 @@ main::before {
     animation: logo 2s 10s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
+    color: #99c0ff;
 }
 
 .sideDetails p {
@@ -109,6 +117,10 @@ main::before {
     animation: logo 2s 11s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
+}
+
+.sideDetails p a {
+    color: #99c0ff;
 }
 
 .sideFooter {
@@ -128,29 +140,44 @@ main::before {
     opacity: 0;
 }
 
-.social i {
+.social a {
     font-size: large;
     cursor: pointer;
     padding-left: 1em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
 }
 
-.social i:nth-child(1) {
+.social a:hover {
+    transition: all 0.3s ease;
+    color: #99c0ff;
+}
+
+.social a:nth-child(1) {
     visibility: hidden;
     animation: logo 2s 12s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.social i:nth-child(2) {
+.social a:nth-child(2) {
     visibility: hidden;
     animation: logo 2s 12.5s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
-.social i:nth-child(3) {
+.social a:nth-child(3) {
     visibility: hidden;
     animation: logo 2s 13s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.social a:nth-child(4) {
+    visibility: hidden;
+    animation: logo 2s 13.5s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -169,6 +196,91 @@ main::before {
     100% {
         left: 22em;
         transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes bottle1 {
+    0% {
+        transform: scale(2.7) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        left: 9em;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        left: 29em;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes bottle2 {
+    0% {
+        transform: scale(2.7) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        left: 15em;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        left: 26em;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes bottle3 {
+    0% {
+        transform: scale(2.7) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        left: 9em;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        left: 32em;
+        transform: scale(1.3) rotate(0deg);
+    }
+}
+
+@keyframes bottle4 {
+    0% {
+        transform: scale(2.3) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        left: 15em;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        left: 26em;
+        transform: scale(0.8) rotate(0deg);
+    }
+}
+
+@keyframes bottle5 {
+    0% {
+        transform: scale(2.7) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        left: 18em;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        left: 28em;
+        transform: scale(0.8) rotate(0deg);
     }
 }
 
@@ -215,5 +327,159 @@ main::before {
     }
     100% {
         background-color: #0c3381bb;
+    }
+}
+
+@media (min-height: 720px) {
+    .sideDetails h1 {
+        visibility: hidden;
+        font-size: 5em;
+        animation: logo 2s 10s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        color: #99c0ff;
+    }
+    .showCase img:nth-child(1) {
+        animation: bottle1 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+    }
+    .showCase img:nth-child(2) {
+        left: 22em;
+    }
+}
+
+@media (max-width: 2560px) {
+    .sideDetails h1 {
+        visibility: hidden;
+        font-size: 5em;
+        animation: logo 2s 10s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        color: #99c0ff;
+    }
+    .showCase img:nth-child(1) {
+        animation: bottle3 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+    }
+    .showCase img:nth-child(2) {
+        left: 24em;
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 1920px) {
+    .sideDetails h1 {
+        visibility: hidden;
+        font-size: 5em;
+        animation: logo 2s 10s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        color: #99c0ff;
+    }
+    .innerShow {
+        right: 3em;
+    }
+    .showCase img:nth-child(1) {
+        animation: bottle3 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+    }
+    .showCase img:nth-child(2) {
+        left: 24em;
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 1440px) {
+    .sideDetails h1 {
+        visibility: hidden;
+        font-size: 5em;
+        animation: logo 2s 10s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        color: #99c0ff;
+    }
+    .showCase img:nth-child(1) {
+        animation: bottle2 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+        left: 15em;
+    }
+    .showCase img:nth-child(2) {
+        left: 16em;
+        transform: scale(1);
+    }
+    .innerShow {
+        right: 5em;
+    }
+}
+
+
+/* @media (max-width: 1440px) {
+
+} */
+
+@media (max-width: 1140px) {
+    .showCase img:nth-child(1) {
+        animation: bottle4 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+        transform: scale(2.2) rotate(90deg);
+        left: 15em;
+    }
+    .showCase img:nth-child(2) {
+        left: 13em;
+        transform: scale(0.8);
+    }
+    .innerShow {
+        right: 6em;
+    }
+    .sideDetails h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 877px) {
+    .innerShow {
+        right: 8em;
+    }
+    .sideDetails h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 760px) {
+    .showCase img:nth-child(1) {
+        animation: bottle5 4s 2s ease;
+        animation-fill-mode: forwards;
+        transition: all 1s ease-in-out;
+    }
+    .innerShow {
+        right: 11em;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    main::before {
+        background-color: transparent;
+    }
+    .details {
+        position: relative;
+        background-color: #07080d;
+        width: 100%;
+    }
+    .sideDetails {
+        padding: 2em 3em;
+        position: relative;
+        top: 2em;
+    }
+    .showCase {
+        display: none;
     }
 }
