@@ -5,12 +5,24 @@
 }
 
 body {
-    background-color: #0c3381;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    font-family: sans-serif;
+    background-image: url("../images/ocean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
-body::before {
+main {
+    background-color: #0c3381;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundFade 2s 14s ease;
+    animation-fill-mode: forwards;
+}
+
+main::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -18,10 +30,11 @@ body::before {
     background-color: #07080d;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    animation: background 2s 7s ease;
+    animation: background 4s 7s ease;
     animation-fill-mode: forwards;
+    transform: scale(1);
     transition: all 1s ease-in-out;
-    z-index: -1;
+    z-index: 1;
 }
 
 .showCase {
@@ -38,7 +51,7 @@ body::before {
     animation: bottle 4s 2s ease;
     animation-fill-mode: forwards;
     transition: all 1s ease-in-out;
-    z-index: 1;
+    z-index: 3;
 }
 
 .showCase img:nth-child(2) {
@@ -49,7 +62,97 @@ body::before {
     animation-fill-mode: forwards;
     transition: all 1s ease-in-out;
     opacity: 0;
-    z-index: 0;
+    z-index: 2;
+}
+
+.details {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0.96);
+    /* background-color: red; */
+    width: 50%;
+    height: 100vh;
+    z-index: 1000;
+    color: white;
+}
+
+.logo {
+    visibility: hidden;
+    align-self: flex-start;
+    position: absolute;
+    top: 1em;
+    padding: 0em 3em;
+    animation: logo 2s 9s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.sideDetails {
+    padding: 0em 3em;
+}
+
+.sideDetails h1 {
+    visibility: hidden;
+    font-size: 3em;
+    animation: logo 2s 10s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.sideDetails p {
+    visibility: hidden;
+    font-size: 1.1em;
+    animation: logo 2s 11s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.sideFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1em;
+}
+
+.sideFooter small {
+    visibility: hidden;
+    animation: logo 2s 11.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.social i {
+    font-size: large;
+    cursor: pointer;
+    padding-left: 1em;
+}
+
+.social i:nth-child(1) {
+    visibility: hidden;
+    animation: logo 2s 12s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.social i:nth-child(2) {
+    visibility: hidden;
+    animation: logo 2s 12.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.social i:nth-child(3) {
+    visibility: hidden;
+    animation: logo 2s 13s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 @keyframes bottle {
@@ -82,7 +185,35 @@ body::before {
     0% {
         width: 100%;
     }
+    25% {
+        width: 50%;
+    }
+    50% {
+        width: 50%;
+        transform: scale(1);
+    }
     100% {
         width: 50%;
+        transform: scale(0.96);
+    }
+}
+
+@keyframes logo {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundFade {
+    0% {
+        background-color: #0c3381;
+    }
+    100% {
+        background-color: #0c3381bb;
     }
 }
