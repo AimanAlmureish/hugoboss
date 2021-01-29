@@ -69,7 +69,7 @@ main::before {
     animation-fill-mode: forwards;
     transition: all 1s ease-in-out;
     opacity: 0;
-    z-index: 2;
+    z-index: -2;
 }
 
 .details {
@@ -287,9 +287,11 @@ main::before {
 @keyframes bottlep {
     0% {
         opacity: 0;
+        z-index: 2;
     }
     100% {
         opacity: 1;
+        z-index: 2;
     }
 }
 
