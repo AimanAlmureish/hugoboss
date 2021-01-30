@@ -113,7 +113,7 @@ main::before {
 
 .sideDetails p {
     visibility: hidden;
-    font-size: 1.1em;
+    font-size: 1em;
     animation: logo 2s 11s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;

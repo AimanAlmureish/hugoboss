@@ -25,14 +25,14 @@
             <div class="sideDetails">
                 <h1>BOSS PERFUME</h1>
                 <p>
-                    A 200ml bottle of BOSS Bottled Infinite eau de parfum, ideal for the modern man. This energising and sensual perfume combines the freshness of citrus with the intensity of aromatic and woody notes. The generously sized bottle is the perfect addition to
-                    any masculine fragrance collection. <br /> Designed and Developed by
+                    A generous 200ml bottle of BOSS Bottled Night eau de toilette. Destined to become the secret weapon in the BOSS man’s armoury of seduction, BOSS Bottled Night instills in him the same compelling presence that underpins his success by day. A unique composition
+                    of elegance and seduction, the scent is intense and spicy with a purposeful, edgy, masculine character. <br /> Designed and Developed by
                     <a href="https://www.aimanalmureish.com"> Aiman Almureish</a> at
                     <a href="https://www.nohashways.com/">Nohashways.</a>
                 </p>
             </div>
             <div class="sideFooter">
-                <small>©2021 All Rights Reserved</small>
+                <small> ©<span id="year">2021</span> All Rights Reserved</small>
                 <div class="social">
                     <a href="https://www.facebook.com/nohashways">
                         <i class="fa fa-facebook"></i>
@@ -51,6 +51,11 @@
             </div>
         </div>
     </main>
+    <script>
+        var date = new Date().getFullYear();
+
+        document.getElementById("year").innerHTML = date;
+    </script>
 </body>
 
 </html>
