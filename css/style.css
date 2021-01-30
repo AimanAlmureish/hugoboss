@@ -287,7 +287,7 @@ main::before {
         transform: scale(2.3) rotate(90deg);
         z-index: 3;
     }
-    420 {
+    42% {
         transform: scale(2.7) rotate(90deg);
         z-index: 3;
     }
@@ -512,6 +512,9 @@ main::before {
 }
 
 @media (max-width: 750px) {
+    .showCase {
+        display: none;
+    }
     main {
         display: flex;
         flex-direction: column;
@@ -529,7 +532,65 @@ main::before {
         position: relative;
         top: 2em;
     }
-    .showCase {
-        display: none;
+}
+
+@media (max-width: 425px) {
+    .logo {
+        visibility: hidden;
+        align-self: flex-start;
+        position: absolute;
+        top: 1em;
+        padding: 2em 1.5em;
+        animation: logo 2s 1s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .sideDetails {
+        padding: 0em 2em;
+    }
+    .sideDetails h1 {
+        visibility: hidden;
+        font-size: 3em;
+        animation: logo 2s 2s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        color: #99c0ff;
+    }
+    .sideDetails p {
+        visibility: hidden;
+        font-size: 1em;
+        animation: logo 2s 3s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .sideFooter small {
+        visibility: hidden;
+        animation: logo 2s 3.5s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .social a:nth-child(1) {
+        visibility: hidden;
+        animation: logo 2s 4s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .social a:nth-child(2) {
+        visibility: hidden;
+        animation: logo 2s 4.5s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .social a:nth-child(3) {
+        visibility: hidden;
+        animation: logo 2s 6s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    .social a:nth-child(4) {
+        visibility: hidden;
+        animation: logo 2s 6.5s ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
     }
 }
