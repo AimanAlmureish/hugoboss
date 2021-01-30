@@ -445,7 +445,7 @@ main::before {
 @media (max-width: 1440px) {
     .sideDetails h1 {
         visibility: hidden;
-        font-size: 5em;
+        font-size: 4em;
         animation: logo 2s 10s ease-in-out;
         animation-fill-mode: forwards;
         opacity: 0;
